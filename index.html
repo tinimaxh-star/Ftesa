@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Altin & Aulona</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<audio id="music" loop autoplay>
+  <source src="music.mp3" type="audio/mp3">
+</audio>
+
+<button class="music-btn" onclick="toggleMusic()">♫</button>
+
+<!-- SECTION 1 -->
+
+<section class="hero">
+
+  <div class="overlay"></div>
+
+  <div class="envelope-box">
+
+    <img
+      src="https://i.imgur.com/LKQKxVY.png"
+      class="envelope"
+      onclick="openInvite()"
+    >
+
+    <p>KLIKO PËR TË HAPUR FTESËN</p>
+
+  </div>
+
+</section>
+
+<!-- SECTION 2 -->
+
+<section class="invite-section">
+
+  <div class="card">
+
+    <p class="top-text">
+      ME ZEMËR TË PLOTË <br>
+      JU FTOJMË NË
+    </p>
+
+    <h2>FEJESËN TONË</h2>
+
+    <h1>
+      ALTIN <br>
+      & <br>
+      AULONA
+    </h1>
+
+    <div class="details">
+
+      <p>📅 20.07.2026</p>
+      <p>📍 PEJË — RESTAURANT CAMP</p>
+      <p>🕕 ORA 18:00</p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SECTION 3 -->
+
+<section class="location-section">
+
+  <div class="map-card">
+
+    <div class="info">
+
+      <h3>Lokacioni</h3>
+
+      <p>Restaurant Camp<br>Pejë</p>
+
+      <a
+        href="https://maps.app.goo.gl/YMeq657jzHi7d9Fa9?g_st=ic"
+        target="_blank"
+      >
+        Hap Lokacionin
+      </a>
+
+    </div>
+
+    <iframe
+      src="https://maps.google.com/maps?q=Restaurant%20Camp%20Peje&t=&z=15&ie=UTF8&iwloc=&output=embed">
+    </iframe>
+
+  </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
