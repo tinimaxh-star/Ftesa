@@ -1,0 +1,199 @@
+<!DOCTYPE html>  
+<html lang="sq">  
+<head>  
+  <meta charset="UTF-8">  
+  <title>Ftesë Fejesë - Altin & Aulona</title>  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <style>  
+    body {  
+      margin: 0;  
+      font-family: 'Georgia', serif;  
+      background: #f9f7f1;  
+    }  
+    .page {  
+      display: none;  
+      height: 100vh;  
+      width: 100vw;  
+      align-items: center;  
+      justify-content: center;  
+      background: #f9f7f1;  
+    }  
+    .active {  
+      display: flex;  
+      flex-direction: column;  
+      align-items: center;  
+      justify-content: center;  
+      transition: opacity .5s;  
+    }  
+    .envelope-img {  
+      width: 300px; max-width: 80vw;  
+      margin-bottom: 24px;  
+      cursor: pointer;  
+      box-shadow: 0 4px 40px 0 rgba(50,40,20,0.14);  
+      border-radius: 15px;  
+    }  
+    .klikoni {  
+      text-align: center;   
+      font-size: 1.15rem;   
+      letter-spacing: 2px;  
+      color: #b09a84;  
+      margin-top: 16px;  
+    }  
+    .invitation-card {  
+      background: #fffefb;  
+      border: 1.5px solid #f2e9df;  
+      border-radius: 16px;  
+      box-shadow: 0 4px 40px 0 rgba(60, 50, 30, 0.08);  
+      padding: 40px 20px 36px 20px;  
+      min-width: 320px;  
+      max-width: 98vw;  
+      text-align: center;  
+    }  
+    .invitation-card h1 {  
+      margin: 30px 0 5px;  
+      font-size: 2.4rem;  
+      letter-spacing: 3px;  
+      color: #211f23;  
+      font-family: 'Georgia', serif;  
+    }  
+    .invitation-card p {  
+      margin: 6px 0;  
+      color: #7c6b50;  
+      font-size: 1.03rem;  
+      letter-spacing: 1.2px;  
+    }  
+    .details-row {  
+      margin: 24px 0;  
+      font-size: 1.14rem;  
+      color: #4c4134;  
+      display: flex;  
+      flex-direction: column;  
+      align-items: center;  
+      gap: 7px;  
+    }  
+    .details-row span { margin-right: 8px; }  
+    .to-location-btn {  
+      margin: 24px 0;  
+      padding: 13px 36px;  
+      font-size: 1.11rem;  
+      color: white;  
+      background: #785d47;  
+      border: none;  
+      border-radius: 25px;  
+      letter-spacing: 2px;  
+      cursor: pointer;  
+      transition: background 0.2s;  
+      box-shadow: 0 2px 16px rgba(60,50,30,0.08);  
+    }  
+    .to-location-btn:hover {  
+      background: #a9927d;  
+    }  
+    .location-card {  
+      background: #fcfbf8;  
+      border-radius: 14px;  
+      padding: 24px;  
+      box-shadow: 0 4px 40px 0 rgba(60, 50, 30, 0.09);  
+      max-width: 90vw;  
+    }  
+    .location-title {  
+      font-size: 1.5rem;  
+      color: #9d845f;  
+      margin-bottom: 12px;  
+      text-align: center;  
+      letter-spacing: 2px;  
+    }  
+    .map-box {  
+      margin: 14px 0;  
+      min-width: 220px; min-height: 220px;  
+      border-radius: 11px;  
+      overflow: hidden;  
+    }  
+    .shko-maps-btn {  
+      margin-top: 10px;  
+      display: inline-block;  
+      background: #415b37;  
+      color: #fff;  
+      border: none;  
+      border-radius: 19px;  
+      padding: 11px 35px;  
+      font-size: 1rem;  
+      letter-spacing: 1.2px;  
+      cursor: pointer;  
+      transition: background 0.19s;  
+    }  
+    .shko-maps-btn:hover {  
+      background: #72ac64;  
+    }  
+    .location-note {  
+      text-align: center;  
+      margin-top: 22px;  
+      font-size: 1.04rem;  
+      color: #9f8653;  
+    }  
+    .footer-names {  
+      margin-top: 18px;  
+      text-align: center;  
+      font-size: 1.19rem;  
+      color: #7a6542;  
+      letter-spacing: 2px;  
+    }  
+  </style>  
+</head>  
+<body>  
+  <div id="page1" class="page active">  
+      <div>  
+        <img src="envelope.svg" alt="Ftesa" class="envelope-img" onclick="nextPage(2)">  
+        <div class="klikoni">KLIKO PËR TË HAPUR FTESËN</div>  
+      </div>  
+  </div>  
+  <div id="page2" class="page">  
+    <div class="invitation-card">  
+      <p style="color:#b39b7a;letter-spacing:2.5px;font-size:0.94rem;margin:0;">ME ZEMËR TË PLOTË<br>JU FTOJMË NË</p>  
+      <h1 style="color:#b39b7a;letter-spacing:4px;margin-bottom:20px;">FEJESËN TONË</h1>  
+      <h1 style="color:#1c1925;letter-spacing:5px;">ALTIN<br>&<br>AULONA</h1>  
+      <div class="details-row" style="font-size:1.10rem;">  
+        <div>📅 20.07.2026</div>  
+        <div>📍 PEJË — RESTAURANT CAMP</div>  
+        <div>🕗 ORA 18:00</div>  
+      </div>  
+      <button class="to-location-btn" onclick="nextPage(3)">SHIKO LOKACIONIN</button>  
+    </div>  
+  </div>  
+  <div id="page3" class="page">  
+    <div class="location-card">  
+      <div class="location-title">LOKACIONI</div>  
+      <div class="map-box">  
+        <iframe  
+          src="https://maps.app.goo.gl/WgL42vHXf6m6vLDJ8?g_st=ic"  
+          width="290"  
+          height="240"  
+          style="border:0;"  
+          allowfullscreen=""  
+          loading="lazy"  
+          referrerpolicy="no-referrer-when-downgrade"></iframe>  
+      </div>  
+      <div style="margin-bottom:10px;font-size:1.01rem;">  
+        Restaurant Camp<br>  
+        Pejë<br>  
+        <a href="https://maps.app.goo.gl/WgL42vHXf6m6vLDJ8?g_st=ic" target="_blank" style="color:#333;font-weight:bold;text-decoration:underline;margin-top:4px;display:inline-block;">Shiko në Google Maps</a>  
+      </div>  
+      <button class="shko-maps-btn" onclick="window.open('https://maps.app.goo.gl/WgL42vHXf6m6vLDJ8?g_st=ic', '_blank')">HAP LOKACIONIN</button>  
+      <div class="location-note">Kliko butonin për të hapur<br>navigimin në Google Maps.</div>  
+      <div class="footer-names">  
+        <div style="margin-top:23px;font-size:1.01rem;">  
+          DO TË JEMI TË LUMTUR TË JU KEMI PRANË<br>NË KËTË DITË TË VEÇANTË TË JETËS SONË!  
+        </div>  
+        <div style="margin-top:16px;font-size:1.26rem;color:#a98a5e;">  
+          ALTIN &amp; AULONA  
+        </div>  
+      </div>  
+    </div>  
+  </div>  
+  <script>  
+    function nextPage(pageNum) {  
+      document.querySelectorAll('.page').forEach(d => d.classList.remove('active'));  
+      document.getElementById('page'+pageNum).classList.add('active');  
+    }  
+  </script>  
+</body>  
+</html>  
